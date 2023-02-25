@@ -1,3 +1,20 @@
+let PlayerChoice
+
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
+function setRock () {
+    PlayerChoice = 'rock'
+}
+
+function setPaper () {
+    PlayerChoice = 'paper'
+}
+
+function setScissors () {
+    PlayerChoice = 'scissors'
+}
 /*Make the computer pick a random choice */
 function getComputerChoice() {
     let Choices = ['rock', 'paper', 'scissors'];
@@ -42,27 +59,17 @@ function PlayGame() {
         /*Set computer choice */
         let ComputerChoices = getComputerChoice();
         /*Set player choice */
-        let statement = false;
-        let PlayerChoice ;
-        while (!statement) {
-            let Choice = prompt("Please select rock, paper or scissors");
-            PlayerChoice = Choice.toLowerCase();
-            if ((PlayerChoice == 'rock') || (PlayerChoice == 'paper') || (PlayerChoice == 'scissors')) {
-                statement = true;
-            }
-            /*If the player chose a different element not rock, paper or scissors */
-            else {
-                alert("You choose an invalid choice. Please pick again");
-            }
-        }
-        /*Compare the choices */
-        round(ComputerChoices, PlayerChoice)
-        /*Display the score and choices */
-        console.log('PlayerScore: ' + PlayerScore);
-        console.log(PlayerChoice);
-        console.log('ComputerScore: ' + ComputerScore);
-        console.log(ComputerChoices);
+        rock.addEventListener('click', setRock);
+        paper.addEventListener('click', setPaper);
+        scissors.addEventListener('click', setScissors)
     }
+    /*Compare the choices */
+    round(ComputerChoices, PlayerChoice)
+    /*Display the score and choices */
+    console.log('PlayerScore: ' + PlayerScore);
+    console.log(PlayerChoice);
+    console.log('ComputerScore: ' + ComputerScore);
+    console.log(ComputerChoices);
 }
 
 

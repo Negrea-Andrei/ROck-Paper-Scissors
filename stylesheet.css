@@ -1,10 +1,84 @@
 body {
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: auto;
     box-sizing: border-box;
 }
-.containter {
+.container {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
-    background-color: aquamarine;
+    background-color: rgb(92, 75, 81);
+    
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    color:peru; 
+    background-color: rgb(140, 190, 178);
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 8px;
+    border-bottom: gold solid 4px;
+    border-left: gold solid 4px ;
+    border-right: gold solid 4px;    
+}
+
+.choiceContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 50px;
+    color: #de8611;
+    background-color: rgb(242, 235, 191);
+}
+
+
+button {
+    margin-left: 15px;
+    font-size: 50px;
+    background-color: teal;
+    color: aqua;
+    margin-bottom: 16px;
+}
+
+.rock {
+    background: url(https://freesvg.org/storage/img/thumb/ilmenskie-rock-dull-mid5.png);
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+}
+
+.paper {
+    background: url(https://freesvg.org/storage/img/thumb/Anonymous_Paperface_1.png);
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+}
+
+.scissors {
+    background: url(https://www.svgrepo.com/show/467042/scissors.svg);
+    background-size: cover;
+    width: 268px;
+    height: 250px;
+
+}
+
+button:hover {
+    background-color: #3e8e41
+}
+
+button:active {
+    background-color: turquoise;
+}
+
+.resolts {
+    height: 313px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F06060;
 }
