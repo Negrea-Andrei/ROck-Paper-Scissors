@@ -1,20 +1,3 @@
-let PlayerChoice
-
-const rock = document.querySelector('#rock');
-const paper = document.querySelector('#paper');
-const scissors = document.querySelector('#scissors');
-
-function setRock () {
-    PlayerChoice = 'rock'
-}
-
-function setPaper () {
-    PlayerChoice = 'paper'
-}
-
-function setScissors () {
-    PlayerChoice = 'scissors'
-}
 /*Make the computer pick a random choice */
 function getComputerChoice() {
     let Choices = ['rock', 'paper', 'scissors'];
@@ -22,26 +5,36 @@ function getComputerChoice() {
     return Choices[rand];
 }
 
+const rock = document.querySelector("rock");
+const paper = document.querySelector("paper");
+const scissors = document.querySelector("scissors");
+
 
 function round(ComputerChoices, PlayerChoice) {
+
     if (ComputerChoices == PlayerChoice) {
         PlayerScore = PlayerScore + 0;
         ComputerScore = ComputerScore + 0;
     }
     /*Computer scores */
-    else if (ComputerChoices == 'rock' && PlayerChoice.toLowerCase() == 'scissors') {
+    else if (ComputerChoices == 'rock' && PlayerChoice == 'scissors') {
         ComputerScore = ComputerScore + 1;
     }
-    else if (ComputerChoices == 'scissors' && PlayerChoice.toLowerCase() == 'paper') {
+    else if (ComputerChoices == 'scissors' && PlayerChoice == 'paper') {
         ComputerScore = ComputerScore + 1;
     }
-    else if (ComputerChoices == 'paper' && PlayerChoice.toLowerCase() == 'rock') {
+    else if (ComputerChoices == 'paper' && PlayerChoice == 'rock') {
         ComputerScore = ComputerScore + 1;
     }
     /*Players scores */
     else {
         PlayerScore++;
     }
+    /*Display the score and choices */
+    console.log('PlayerScore: ' + PlayerScore);
+    console.log(PlayerChoice);
+    console.log('ComputerScore: ' + ComputerScore);
+    console.log(ComputerChoices);
 }
 
 
@@ -53,28 +46,17 @@ let PlayerScore = 0;
 let ComputerScore = 0;
 
 
-function PlayGame() {
-    /*Set a loop for 5 rounds */
-    for (i = 0; i < 5; i++) {
-        /*Set computer choice */
-        let ComputerChoices = getComputerChoice();
-        /*Set player choice */
-        rock.addEventListener('click', setRock);
-        paper.addEventListener('click', setPaper);
-        scissors.addEventListener('click', setScissors)
-    }
-    /*Compare the choices */
-    round(ComputerChoices, PlayerChoice)
-    /*Display the score and choices */
-    console.log('PlayerScore: ' + PlayerScore);
-    console.log(PlayerChoice);
-    console.log('ComputerScore: ' + ComputerScore);
-    console.log(ComputerChoices);
-}
+rock.addEventListener("click", () => {
+    round(getComputerChoice(), "rock")
+});
 
+paper.addEventListener("click", () => {
+     round(getComputerChoice(), "paper")
+});
 
-/*Execute the game */
-PlayGame();
+scissors.addEventListener("click", () => {
+    round(getComputerChoice(), "scissors")
+});      
 
 
 /*Declare the winner */
