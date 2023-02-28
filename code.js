@@ -1,12 +1,20 @@
+const buttons = document.querySelectorAll('.choices button')
+const results = document.querySelector('.container');
+
 /*Set player score */
 let PlayerScore = 0;
 
 /*Set Computer score */
 let ComputerScore = 0;
 
-const buttons = document.querySelectorAll('.choices button')
+/*Create a new node for resolts */
+const scores = document.createElement('div');
+scores.classList.add('scores');
+scores.style.cssText = 'height: 263px; display: flex; align-items: center; flex-direction: column;color: lime; background: #F06060; font-size: 50px'
 
+results.appendChild(scores);
 
+/* Code that will be executet when user clicks a button */
 function round(event) {
 
     const PlayerChoice = event.target.className;
@@ -19,7 +27,7 @@ function round(event) {
     }
 
     /*Set computer choice */
-    let ComputerChoices = getComputerChoice();
+    const ComputerChoices = getComputerChoice();
 
     if (ComputerChoices == PlayerChoice) {
         PlayerScore = PlayerScore + 0;
@@ -33,7 +41,7 @@ function round(event) {
     else if (ComputerChoices == 'scissors' && PlayerChoice == 'paper') {
         ComputerScore = ComputerScore + 1;
     }
-    else if (ComputerChoices == 'paper' && PlayerChoice== 'rock') {
+    else if (ComputerChoices == 'paper' && PlayerChoice == 'rock') {
         ComputerScore = ComputerScore + 1;
     }
 
@@ -41,22 +49,21 @@ function round(event) {
     else {
         PlayerScore++;
     }
+    
+    /*add text with informations to the node */
+    scores.textContent = `Player points: ${PlayerScore} Computer points: ${ComputerScore} Player chose ${PlayerChoice} Computer chose ${ComputerChoices}`;
 
-    /*Display the score and choices */
-    console.log('PlayerScore: ' + PlayerScore);
-    console.log(PlayerChoice);
-    console.log('ComputerScore: ' + ComputerScore);
-    console.log(ComputerChoices);
 
     /*Declare the winner */
-    if (PlayerScore > ComputerScore) {
-        alert("Player win!");
+    if (PlayerScore == 5) {
+        PlayerScore = 0;
+        ComputerScore = 0;
+        scores.textContent = `Player win!`;
     }
-    else if (PlayerScore < ComputerScore) {
-        alert("Player lost!");
-    }
-    else {
-        alert("It's a Draw!");
+    else if (ComputerScore == 5) {
+        PlayerScore = 0;
+        ComputerScore = 0;
+        scores.textContent = `Player lost!`;
     }
 }
 
