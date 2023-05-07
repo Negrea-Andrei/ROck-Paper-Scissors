@@ -1,0 +1,53 @@
+[33mcommit 29c015fd5a8e8307078f5f802001d0f12abe99d4[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: Negrea-Andrei <negrea97@yahoo.com>
+Date:   Tue Feb 28 20:35:44 2023 +0200
+
+    Finished the game and it runs till someone makes 5 points
+
+[33mcommit 3dbe4e82967b3f28d449d8af48e76c48295b0c7e[m
+Author: Negrea-Andrei <negrea97@yahoo.com>
+Date:   Mon Feb 27 21:42:12 2023 +0200
+
+    Implemented the code tu run when a button is clicked
+
+[33mcommit ff577d952cf904dbf3d7149fdf73fd69dfca572a[m
+Author: Negrea-Andrei <negrea97@yahoo.com>
+Date:   Sun Feb 26 20:10:20 2023 +0200
+
+    Tried to add the UI
+
+[33mcommit 314f702f332d851746e7ea32bc7ec5df55ff5442[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Negrea-Andrei <negrea97@yahoo.com>
+Date:   Sat Feb 25 21:51:01 2023 +0200
+
+    Added a UI interface
+
+[33mcommit 17230c32655a16836d2e7f7160f8ebce68ae3ad8[m
+Author: Negrea-Andrei <negrea97@yahoo.com>
+Date:   Thu Feb 23 21:08:39 2023 +0200
+
+    Modified the JS so that the player can only pick rock, paper or scissors
+
+[33mcommit 83833271978c0e6e06f295c161f80f8cb199aa5f[m
+Author: Negrea-Andrei <negrea97@yahoo.com>
+Date:   Thu Jan 26 22:21:08 2023 +0200
+
+    Modified the index.html file
+
+[33mcommit 1e806426ae27363f4f11d3f1ac35602bff972358[m
+Author: Negrea-Andrei <negrea97@yahoo.com>
+Date:   Thu Jan 26 21:03:41 2023 +0200
+
+    Created the code for the Rock-Paper-Scissor game
+
+[33mcommit 521556da5e67ef9a13321be8d829710a30f1f908[m
+Author: Andrei Negrea <negrea97@yahoo.com>
+Date:   Thu Jan 26 20:49:46 2023 +0200
+
+    Update README.md
+
+[33mcommit ea496b1270847decd4be2b58b8064a0f03b2ca39[m
+Author: Andrei Negrea <negrea97@yahoo.com>
+Date:   Thu Jan 26 20:49:34 2023 +0200
+
+    Initial commit
